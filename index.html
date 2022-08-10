@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Filter Bootstrap 5</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col text-center my-4">
+                <h1 class="fs-2">Trending Items</h1>
+                <div class="underline mx-auto mt-3"></div>
+            </div>
+        </div>
+
+        <div class="row mt-3 mb-4 button-group filter-button-group">
+            <div class="col d-flex justify-content-center">
+                <button type="button" data-filter="*" class="btn btn-primary mx-1 text-dark">All</button>
+                <button type="button" data-filter=".electronic" class="btn btn-primary mx-1 text-dark">Electronics</button>
+                <button type="button" data-filter=".clothing" class="btn btn-primary mx-1 text-dark">Clothing</button>
+                <button type="button" data-filter=".furniture" class="btn btn-primary mx-1 text-dark">Furniture</button>
+            </div>
+        </div>
+
+        <div class="my-5 d-flex">
+            <table width= 30%>
+                <tr>
+                <td>Sort By</td>
+                    <td>
+                        <div class="select-class button-group sort-by-button-group">
+                            <select name="product" id="product" width="300" style="width: 300px">
+                                <option data-sort-by="original-order">---</option>
+                                <option data-sort-by="Highest" id="TLX">Highest to Lowest</option>
+                                <option data-sort-by="Lowest" id="FLX">Lowest to Highest</option>
+                            </select> 
+                        </div> 
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="row justify-content-center g-4" id="product-list">
+            <div class="col-lg-4 col-md-6 electronic">
+                <div class="product-item">
+                    <div class="product-img">
+                        <img src="./assets/155412-removebg-preview.png" alt="" class="img-fluid d-block mx-auto">
+                    </div>
+                    <div class="product-content text-center py-3">
+                        <span class="d-block text-uppercase fw-bold">product name</span>
+                        <span class="d-block">₱ 54,00</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 furniture">
+                <div class="product-item">
+                    <div class="product-img">
+                        <img src="./assets/fur1.png" alt="" class="img-fluid d-block mx-auto">
+                    </div>
+                    <div class="product-content text-center py-3">
+                        <span class="d-block text-uppercase fw-bold">product name</span>
+                        <span class="d-block">₱ 32,00</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 electronic">
+                <div class="product-item">
+                    <div class="product-img">
+                        <img src="./assets/gsmarena_002-removebg-preview.png" alt="" class="img-fluid d-block mx-auto">
+                    </div>
+                    <div class="product-content text-center py-3">
+                        <span class="d-block text-uppercase fw-bold">product name</span>
+                        <span class="d-block">₱ 15,00</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 clothing">
+                <div class="product-item">
+                    <div class="product-img">
+                        <img src="./assets/cloth3.png" alt="" class="img-fluid d-block mx-auto">
+                    </div>
+                    <div class="product-content text-center py-3">
+                        <span class="d-block text-uppercase fw-bold">product name</span>
+                        <span class="d-block">₱ 8,00</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 clothing">
+                <div class="product-item">
+                    <div class="product-img">
+                        <img src="./assets/cloth2.png" alt="" class="img-fluid d-block mx-auto">
+                    </div>
+                    <div class="product-content text-center py-3">
+                        <span class="d-block text-uppercase fw-bold">product name</span>
+                        <span class="d-block">₱ 12,00</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 electronic">
+                <div class="product-item">
+                    <div class="product-img">
+                        <img src="./assets/Motorola-Edge-20-Frosted-Emerald-removebg-preview.png" alt="" class="img-fluid d-block mx-auto">
+                    </div>
+                    <div class="product-content text-center py-3">
+                        <span class="d-block text-uppercase fw-bold">product name</span>
+                        <span class="d-block">₱ 25,00</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 clothing">
+                <div class="product-item">
+                    <div class="product-img">
+                        <img src="./assets/cloth1.png" alt="" class="img-fluid d-block mx-auto">
+                    </div>
+                    <div class="product-content text-center py-3">
+                        <span class="d-block text-uppercase fw-bold">product name</span>
+                        <span class="d-block">₱ 17,00</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 furniture">
+                <div class="product-item">
+                    <div class="product-img">
+                        <img src="./assets/fur2.png" alt="" class="img-fluid d-block mx-auto">
+                    </div>
+                    <div class="product-content text-center py-3">
+                        <span class="d-block text-uppercase fw-bold">product name</span>
+                        <span class="d-block">₱ 2,00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+</body>
+</html>

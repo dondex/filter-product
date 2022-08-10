@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.btn:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.btn-primary {
+    background-color: #fff !important;
+    border: 1px solid #000 ;
+
+}
+.btn-primary:hover {
+    background-color:  #f7941d !important;
+    color: #fff !important;
+}
+
+.product-item {
+    border: 1px solid #ebebeb;
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+    height: auto;
+    width: auto;
+}
+
+.product-item:hover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.05);
+    z-index: 1;
+}
+.product-img img {
+    margin-top: 30px;
+    width: auto;
+    height: 300px;
+}
